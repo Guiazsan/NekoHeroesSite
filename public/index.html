@@ -1,43 +1,59 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neko Heroes</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&amp;display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
-<body>
-    <div class="menu"></div>
-    <div style="position: absolute;">
-        <table style="width: 100%;">
-            <tr>
-                <th style="padding-left: 15px;">
-                    <h1 style="font-weight: normal; margin-bottom: 0px; position: relative; left: 12px; margin-top: 0px;">
-                        <label style="font-family: madeInChina; font-size: 100px; position: relative; bottom: 4px; left: 12px;">N</label>
-                        <label style="font-family: Japanese3017; font-size: 70px;">eko</label>
-                    </h2>
-                    <h2 id="heroes">Heroes</h3>
-                </th>
+<body onload="pronto()" onresize="mudarScale()">
+    <div class="menu">
+        <div style="position: absolute; height: 100%;">
+            <div style="top: 30px; width: 200px; position: absolute;">
+                <h1 style="font-weight: normal; margin-bottom: 0px; position: relative; left: 12px; margin-top: 0px;">
+                    <label style="font-family: madeInChina; font-size: 100px; position: relative; bottom: 4px; left: 12px;">N</label>
+                    <label style="font-family: Japanese3017; font-size: 70px;">eko</label>
+                </h1>
+                <h2 id="heroes">Heroes</h2>
+            </div>
+            
+            <table style="width: 100%;position: absolute;top: 0px;left: 250px;height: 100%;">
+                <tbody>
+                    <tr>
+                        <th>
+                            <button onclick="collapseMiniMenu()" class="menuItem" id="menuButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path></svg>
+                            </button>
+                        </th>
 
-                <th class="menuItem">
-                    <a href="">HOME</a>
-                </th>
+                        <th>
+                            <button class="menuItem" href="">HOME</button>
+                        </th>
 
-                <th class="menuItem">
-                    <a href="">SOBRE</a>
-                </th>
+                        <th>
+                            <button class="menuItem" href="">SOBRE</button>
+                        </th>
 
-                <th class="menuItem">
-                    <a href="">DESENVOLVIMENTO</a>
-                </th>
+                        <th>
+                            <button class="menuItem" href="">DESENVOLVIMENTO</button>
+                        </th>
 
-                <th class="menuItem">
-                    <a href="">CONTATO</a>
-                </th>
-            </tr>
-        </table>
+                        <th>
+                            <button class="menuItem" href="">CONTATO</button>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="miniMenu" hidden>
+        <button class="miniMenuItem" hidden>HOME</button>
+        <button class="miniMenuItem" hidden>SOBRE</button>
+        <button class="miniMenuItem" hidden>DESENVOLVIMENTO</button>
+        <button class="miniMenuItem" hidden>CONTATO</button>
     </div>
 </body>
 </html>
