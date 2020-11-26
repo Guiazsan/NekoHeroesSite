@@ -1,14 +1,10 @@
 function carregarPosts() {
-    var arquivo = new XMLHttpRequest();
-    arquivo.open("GET", "file:///C:/Users/Admin/Meus Projetos/NekoHeroesSite/public/frames/devblog/teste.json", false);
-    arquivo.onreadystatechange = function () {
-        if(arquivo.readyState === 4)
-        {
-            if(arquivo.status === 200 || arquivo.status == 0)
-            {
-                var posts = JSON.parse(arquivo.responseText);
-                alert(posts);
-            }
+    let xobj = new XMLHttpRequest();
+    xobj.open('GET', 'teste.json', false);
+    xobj.onreadystatechange = () => {
+        if (xobj.readyState === 4 && xobj.status === 200) {
+            callback(xobj.responseText);
         }
-    };    
+    };
+    xobj.send(null);
 }
