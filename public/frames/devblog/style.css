@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;    
 }
 
 h2 {
@@ -9,8 +9,31 @@ h2 {
     font-size: 45px;
 }
 
-th {
+#subtitulo {
     padding-left: 5px;
     padding-right: 5px;
     font-weight: 100;
+}
+
+.posts {
+    height: 100%;
+    width: 70%;
+    text-align: left;
+}
+
+.tweets {
+    height: 100%;
+    width: 30%;
+    text-align: left;
+}
+
+#posts, #tweets {
+    vertical-align: top;
+}
+
+#posts {
+    opacity: 100%;
+    background-color: white;
+    padding-left: 2%;
+    border-radius: 5px;
 }
